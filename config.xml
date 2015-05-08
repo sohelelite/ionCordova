@@ -45,5 +45,6 @@
 
     <gap:plugin name="com.ionic.keyboard" version="1.0.3" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+    <gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
 
 </widget>

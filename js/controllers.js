@@ -33,12 +33,12 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('PlaylistsCtrl', function($ionicPlatform, $scope, $cordovaDevice) {
-        console.log('i m in playlist controller');
+.controller('DeviceCtrl', function($ionicPlatform, $scope, $cordovaDevice) {
+
         $ionicPlatform.ready(function() {
-            console.log('i m in ionic platform ready');
+
             $scope.$apply(function() {
-                console.log('i m scope apply');
+
                 // sometimes binding does not work! :/
 
                 // getting device infor from $cordovaDevice
@@ -53,6 +53,23 @@ angular.module('starter.controllers', [])
 
         });
 })
+
+.controller('BatteryCtrl', function ($ionicPlatform, $rootScope, $scope, $cordovaBatteryStatus) {
+
+        $ionicPlatform.ready(function() {
+
+            $rootScope.$on('$cordovaBatteryStatus:status', function(result) {
+                $scope.$apply(function() {
+                    // sometimes binding does not work! :/
+
+                    $scope.batteryLevel = result.level; // (0 - 100)
+                    $scope.isPluggedIn = result.isPlugged; // bool
+                });
+            });
+
+        });
+
+    })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
