@@ -47,6 +47,16 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
               }
           }
       })
+
+      .state('app.notifications', {
+          url: "/notifications",
+          views: {
+              'menuContent': {
+                  templateUrl: "templates/notification.html",
+                  controller: 'NotificationsCtrl'
+              }
+          }
+      })
   ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/device');

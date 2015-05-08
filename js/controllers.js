@@ -57,7 +57,7 @@ angular.module('starter.controllers', [])
 .controller('BatteryCtrl', function ($ionicPlatform, $rootScope, $scope, $cordovaBatteryStatus) {
 
         $ionicPlatform.ready(function() {
-
+            console.log('i m in battery');
             $rootScope.$on('$cordovaBatteryStatus:status', function(result) {
                 $scope.$apply(function() {
                     // sometimes binding does not work! :/
@@ -69,6 +69,24 @@ angular.module('starter.controllers', [])
 
         });
 
+    })
+
+    .controller('NotificationsCtrl', function($ionicPlatform, $scope, $cordovaLocalNotification) {
+        $ionicPlatform.ready(function() {
+
+            $scope.notify = function() {
+                console.log('i will notify');
+                $cordovaLocalNotification.add({
+                    id: 'welcome_notif',
+                    title: "This is a local notification",
+                    text: 'Notification text'
+                }).then(function() {
+                    console.log('notification fired');
+                });
+            };
+
+
+        });
     })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
