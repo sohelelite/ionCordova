@@ -73,7 +73,7 @@ angular.module('starter.controllers', [])
 
     .controller('NotificationsCtrl', function($ionicPlatform, $scope, $cordovaLocalNotification) {
         $ionicPlatform.ready(function() {
-
+            console.log('i m in notify for ionic platform');
             $scope.notify = function() {
                 console.log('i will notify');
                 $cordovaLocalNotification.add({
