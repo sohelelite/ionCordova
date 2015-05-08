@@ -34,8 +34,11 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistsCtrl', function($ionicPlatform, $scope, $cordovaDevice) {
+        console.log('i m in playlist controller');
         $ionicPlatform.ready(function() {
+            console.log('i m in ionic platform ready');
             $scope.$apply(function() {
+                console.log('i m scope apply');
                 // sometimes binding does not work! :/
 
                 // getting device infor from $cordovaDevice
