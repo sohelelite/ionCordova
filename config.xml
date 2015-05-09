@@ -46,6 +46,10 @@
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
 
+    <icon src="icon.png" />
+    <gap:splash src="splash.png" />
+
+
     <gap:plugin name="com.ionic.keyboard" version="1.0.3" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
     <gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
