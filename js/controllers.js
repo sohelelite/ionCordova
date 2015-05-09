@@ -54,9 +54,12 @@ angular.module('starter.controllers', [])
         });
 })
 
-.controller('BatteryCtrl', function ($ionicPlatform, $rootScope, $scope, $cordovaBatteryStatus) {
+.controller('BatteryCtrl', function ($ionicPlatform, $rootScope, $scope, $cordovaBatteryStatus, $cordovaSplashscreen) {
 
         $ionicPlatform.ready(function() {
+
+            $cordovaSplashscreen.show();
+
             console.log('i m in battery');
             $rootScope.$on('$cordovaBatteryStatus:status', function(result) {
                 $scope.$apply(function() {
