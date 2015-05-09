@@ -16,15 +16,6 @@
   <access origin="*"/>
 
 
-    <gap:plugin name="com.ionic.keyboard" version="1.0.3" />
-    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
-    <gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
-    <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.1" />
-    <gap:plugin name="nl.x-services.plugins.toast" version="2.0.2" />
-
-    <feature name="http://api.phonegap.com/1.0/battery"/>
-    <feature name="http://api.phonegap.com/1.0/notification"/>
-
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -55,6 +46,11 @@
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
 
-
+    <gap:plugin name="com.ionic.keyboard" version="1.0.3" />
+    <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
+    <gap:plugin name="org.apache.cordova.battery-status" version="0.2.11" />
+    <gap:plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.1" />
+    <gap:plugin name="nl.x-services.plugins.toast" version="2.0.2" />
+    <gap:plugin name="org.apache.cordova.splashscreen" version="0.3.4" />
 
 </widget>
