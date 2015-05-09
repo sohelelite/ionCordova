@@ -89,5 +89,16 @@ angular.module('starter.controllers', [])
         });
     })
 
+    .controller('ToastCtrl', function($ionicPlatform, $scope, $cordovaToast) {
+        $ionicPlatform.ready(function() {
+            $cordovaToast.showShortTop('Hello World!!');
+
+            $scope.showToast = function() {
+                $cordovaToast
+                    .show('You clicked a button!!', 'long', 'center');
+            }
+        });
+    })
+
 .controller('PlaylistCtrl', function($scope, $stateParams) {
 });
