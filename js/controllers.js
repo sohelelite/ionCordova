@@ -107,7 +107,7 @@ angular.module('starter.controllers', [])
 
         var options = {
             date: new Date(),
-            mode: 'date', // or 'time'
+            mode: 'time', // or 'date'
             minDate: new Date() - 10000,
             allowOldDates: true,
             allowFutureDates: false,
