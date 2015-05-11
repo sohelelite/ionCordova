@@ -67,6 +67,18 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova'])
               }
           }
       })
+
+      .state('app.datepicker',{
+          url:'/datepicker',
+          views:{
+              'menuContent': {
+                  templateUrl: "templates/datepicker.html",
+                  controller: 'DatepickerCtrl'
+              }
+          }
+      })
+
+
   ;
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/device');
